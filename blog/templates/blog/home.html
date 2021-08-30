@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+{% load static%}
+
+{% block content %}
+
+<div class="col-sm-12">
+<h3 class="headblock">All Posts</h3>
+{% for post in posts %}
+<br>
+<div class="jumbotron mx-2 my-3">
+    <h1 class="home-h1">{{post.title}}</h1>
+    <p>{{post.desc}}</p> 
+    <hr class="my-2">
+   <p>post-date-time:<span>{{post.post_date}}</span></p>
+   <p class="">post by:
+   <button>{{post.written_by}}</button></p>
+    
+</div>
+
+{% endfor %}
+
+</div>
+{% endblock content %}

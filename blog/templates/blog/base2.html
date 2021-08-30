@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>base</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="{% static 'blog/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    </head>
+    <body>
+    <div class="containe-fluid bg-dark">
+        {% include 'blog/navbar2.html'%}
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                {% block msg %}
+                {% endblock msg %}
+            </div>
+        </div>
+        <div class ="row">
+        {%block side %}
+        {% endblock side %}
+        
+        {%block content %}
+        {% endblock content %}
+        
+        </div>
+         <footer>
+        <div> All Copyright Resirved 2020-2021
+            <a href="mailto:vikashminj1999@gmail.com">Send mail for any quiry</a>
+        </div>
+        </footer>
+    </div>
+        
+        <script src="{% static 'blog/js/jquery.js' %}"></script> 
+        <script src="{% static 'blog/js/popper.js' %}"></script>
+        <script src="{% static 'blog/js/bootstrap.js'%}"></script>
+        <script src="{% static 'blog/js/script.js'%}"></script>
+    </body>
+</html>

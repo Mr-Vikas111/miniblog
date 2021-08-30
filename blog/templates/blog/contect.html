@@ -1,0 +1,19 @@
+{% extends 'blog/base2.html' %}
+{% load static%}
+
+
+{% block content %}
+<h3 class="my-2">Contect Form</h3>
+<div class="col-sm-12 my-2">
+    <form action="" method="post" novalidate>
+    {%csrf_token%}
+    {% for fm in form %}
+    <div class="form-group my-2">
+        {{fm.label_tag}} {{fm}} <small class="text-warning">{{fm.errors|striptags}}</small> 
+    {% endfor %}
+    </div>
+    <input type="Submit" class="my-2 btn btn-primary" name="Submit">
+</form>
+
+</div>
+{% endblock content %}

@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Miniblog.urls'
+ROOT_URLCONF = 'miniblog.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Miniblog.wsgi.application'
+WSGI_APPLICATION = 'miniblog.wsgi.application'
 
 
 # Database
